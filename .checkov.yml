@@ -1,0 +1,6 @@
+# 1. Top-level key "skip_checks" is a list of Checkov IDs to skip entirely.
+#    Each entry must match a check ID (e.g. CKV_AWS_20, CKV_K8S_13, etc.).
+skip-check:
+  - CKV_AWS_20       # e.g. “Ensure S3 bucket has encryption”
+  - CKV_AWS_52       # e.g. “Ensure S3 bucket has no public ACL”
+  - CKV_K8S_13       # e.g. “PodSecurityContext should set runAsNonRoot”

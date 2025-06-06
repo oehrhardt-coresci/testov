@@ -1,0 +1,17 @@
+---
+# check_name_tag.yaml
+
+metadata:
+  id: "CKV2_AWS_S3_NAME_TAG"
+  name: "Ensure aws_s3_bucket includes a 'Name' tag"
+  category: "CONVENTION"
+  severity: "MEDIUM"
+  provider: "terraform"
+
+definition:
+  cond_type: "attribute"
+  resource_types:
+  - "aws_s3_bucket"
+  attribute: "tags"
+  operator: "exists"
+  value: "Name"
